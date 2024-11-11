@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clément Billy - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header id="header">
+  <nav>
+    <!--        <ul>-->
+    <!--            <li><a href="#home">Accueil</a></li>-->
+    <!--            <li><a href="#about">À propos</a></li>-->
+    <!--            <li><a href="#projects">Projets</a></li>-->
+    <!--            <li><a href="#skills">Compétences</a></li>-->
+    <!--            <li><a href="#contact">Contact</a></li>-->
+    <!--        </ul>-->
+
+    <ul>
+      <li><a href="#header">Acueil</a></li>
+      <li><a href="#header">À propos</a></li>
+      <li><a href="#header">Projets</a></li>
+      <li><a href="#header">Compétences</a></li>
+      <li><a href="#header">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <div>
+    <h1>Clément Billy, ingénieur systèmes embarqués</h1>
+    <p>Je vous souhaite la bienvenue sur ce site qui vous permettra de découvrir qui je suis, mon parcours, et bien
+      d'autres informations qui, je l'espère, éveilleront votre curiosité...</p>
+    <!--        <a href="#about" id="cta-btn">En savoir plus</a>-->
+    <a href="#header" id="cta-btn">Work in progress...<br>(avaible soon)</a>
+  </div>
+</section>
+
+<section id="about">
+  <h1>A propos</h1>
+  <div class="about-container">
+    <img src="face.jpg" alt="Ma photo de profil" class="profile-picture">
+    <p>Prochainement diplômé d’un master en ingénieur spécialisé en systèmes embarqué, je suis à la recherche
+      d’opportunités dans ce domaine et dans le développement de manière générale. En effet, j’ai toujours été
+      passionné par le monde de l’informatique et celui-ci touche de très nombreux domaines. Curieux et créatif,
+      je cherche à rejoindre une équipe qui travaille sur des projets innovants.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <!-- Projet 1 -->
+  <div class="project">
+    <img src="mepuls.jpg" alt="Image du projet 1" class="project-image">
+    <div class="project-details">
+      <h3>Logiciel IHM en C++</h3>
+      <p>Description de mon premier projet.</p>
+      <a href="page_projet1.html" class="project-btn">Voir le projet</a>
+    </div>
+  </div>
+
+  <!-- Projet 2 -->
+  <div class="project">
+    <img src="mepuls.jpg" alt="Image du projet 2" class="project-image">
+    <div class="project-details">
+      <h3>Capteur activité musculaire</h3>
+      <p>Description de mon second projet.</p>
+      <a href="page_projet2.html" class="project-btn">Voir le projet</a>
+    </div>
+  </div>
+
+  <!-- Projet 2 -->
+  <div class="project">
+    <img src="mepuls.jpg" alt="Image du projet 2" class="project-image">
+    <div class="project-details">
+      <h3>Capteur activité musculaire</h3>
+      <p>Description de mon second projet.</p>
+      <a href="page_projet2.html" class="project-btn">Voir le projet</a>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="mepuls.jpg" alt="Image du projet 2" class="project-image">
+    <div class="project-details">
+      <h3>Capteur activité musculaire</h3>
+      <p>Description de mon second projet.</p>
+      <a href="page_projet2.html" class="project-btn">Voir le projet</a>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h1>Compétences</h1>
+  <div id="skills-carousel">
+    <button class="arrow left" onclick="prevSkill()">&#9664;</button>
+    <div id="skill-container">
+      <div id="skills-wrapper">
+        <div class="skill"><img src="clion-1.svg" class="skill-image" alt="CLion"></div>
+        <div class="skill"><img src="c.svg" class="skill-image" alt="C Programming"></div>
+        <div class="skill"><img src="webstorm-icon.svg" class="skill-image" alt="WebStorm"></div>
+        <!-- Ajoutez d'autres compétences ici -->
+      </div>
+    </div>
+    <button class="arrow right" onclick="nextSkill()">&#9654;</button>
+  </div>
+</section>
+
+<section id="contact">
+  <h1>Contact</h1>
+  <p>LinkedIn : <a href="https://www.linkedin.com/in/billy-clement/" target="_blank"> <img src=linkedin.png"> </a></p>
+  <p>Email : <a href="clementbilly04@gmail.com" target="_blank"> <img src=gmail.png"> </a></p>
+  <p>Portable : 07 81 65 08 58</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
