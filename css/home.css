@@ -22,11 +22,11 @@
 #home h1 {
     font-size: 64px;
     margin-bottom: 150px;
-    overflow: hidden; /* Masquer les parties non écrites du texte */
-    border-right: 4px solid #ffffff; /* Ajouter un curseur de type écriture */
-    white-space: nowrap; /* Empêcher le texte de se couper sur plusieurs lignes */
-    width: 0; /* Commence avec une largeur de 0 */
-    animation: typing 3s steps(200) 1s forwards, blink 1s step-end infinite; /* Typing + blink du curseur */
+    overflow: hidden;
+    border-right: 4px solid #ffffff;
+    white-space: nowrap; /* Forcer une ligne unique sur grands écrans */
+    width: 0;
+    animation: typing 3s steps(200) 1s forwards, blink 1s step-end infinite;
 }
 
 /* Animation d'écriture (typewriter effect) */
@@ -42,10 +42,27 @@
 /* Animation de clignotement du curseur */
 @keyframes blink {
     50% {
-        border-color: transparent; /* Le curseur disparaît à moitié */
+        border-color: transparent;
     }
     100% {
-        border-color: #ffffff; /* Le curseur réapparaît */
+        border-color: #ffffff;
+    }
+}
+
+/* Ajustements pour les écrans de taille plus petite */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 48px; /* Réduit la taille de la police */
+        white-space: normal; /* Permet le retour à la ligne */
+        animation: typing 4s steps(200) 1s forwards, blink 1s step-end infinite;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 32px; /* Réduit davantage la taille de la police */
+        white-space: normal; /* Permet le retour à la ligne */
+        animation: typing 4.5s steps(200) 1s forwards, blink 1s step-end infinite;
     }
 }
 
