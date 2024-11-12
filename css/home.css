@@ -22,20 +22,30 @@
 #home h1 {
     font-size: 64px;
     margin-bottom: 150px;
-    opacity: 0;  /* Commence caché */
-    transform: translateY(-50px);  /* Position de départ */
-    animation: fadeInUp 1.5s forwards; /* L'animation */
+    overflow: hidden; /* Masquer les parties non écrites du texte */
+    border-right: 4px solid #ffffff; /* Ajouter un curseur de type écriture */
+    white-space: nowrap; /* Empêcher le texte de se couper sur plusieurs lignes */
+    width: 0; /* Commence avec une largeur de 0 */
+    animation: typing 3s steps(200) 1s forwards, blink 1s step-end infinite; /* Typing + blink du curseur */
 }
 
-/* Définir l'animation fadeInUp */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px); /* Démarre en haut */
+/* Animation d'écriture (typewriter effect) */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animation de clignotement du curseur */
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Le curseur disparaît à moitié */
     }
     100% {
-        opacity: 1;
-        transform: translateY(0); /* Finit à sa position normale */
+        border-color: #ffffff; /* Le curseur réapparaît */
     }
 }
 
