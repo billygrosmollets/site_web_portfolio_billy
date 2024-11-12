@@ -53,16 +53,16 @@
 @media (max-width: 768px) {
     #home h1 {
         font-size: 48px; /* Réduit la taille de la police */
-        white-space: normal; /* Permet le retour à la ligne */
-        animation: typing 4s steps(200) 1s forwards, blink 1s step-end infinite;
+        /*white-space: normal; /* Permet le retour à la ligne */
+        animation: typing 3s steps(200) 1s forwards, blink 1s step-end infinite;
     }
 }
 
 @media (max-width: 480px) {
     #home h1 {
         font-size: 32px; /* Réduit davantage la taille de la police */
-        white-space: normal; /* Permet le retour à la ligne */
-        animation: typing 4.5s steps(200) 1s forwards, blink 1s step-end infinite;
+       /* white-space: normal; /* Permet le retour à la ligne */
+        animation: typing 3s steps(200) 1s forwards, blink 1s step-end infinite;
     }
 }
 
