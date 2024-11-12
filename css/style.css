@@ -9,3 +9,10 @@ body {
     padding: 0;
     overflow: hidden;
 }
+
+/* Désactiver le défilement sur les appareils mobiles */
+@media only screen and (max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+}
