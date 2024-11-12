@@ -2,6 +2,7 @@
 #home {
     background: url('../assets/home.jpg') no-repeat center center/cover;
     height: 100vh;
+    min-height: 600px; /* Assure une hauteur minimale sur petits écrans */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,11 +18,12 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 15px; /* Ajoute un peu de padding sur les côtés pour éviter le débordement */
 }
 
 #home h1 {
     font-size: 64px;
-    margin-bottom: 20px;
+    margin-bottom: 150px;
     opacity: 0;  /* Commence caché */
     transform: translateY(-50px);  /* Position de départ */
     animation: fadeInUp 1.5s forwards; /* L'animation */
@@ -44,6 +46,7 @@
     font-size: 24px;
     margin-bottom: 200px;
     max-width: 1050px;
+    width: 90%; /* Permet de mieux s'adapter à la largeur des petits écrans */
 }
 
 #home_btn {
@@ -61,4 +64,39 @@
     border-radius: 15px;
     background-color: #191919;
     font-weight: bold;
+}
+
+/* Media Queries pour ajuster sur les petits écrans */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 48px; /* Réduire la taille du titre sur les petits écrans */
+        margin-bottom: 100px;
+    }
+
+    #home p {
+        font-size: 18px; /* Réduire la taille du texte pour mieux s'adapter */
+        margin-bottom: 50px;
+    }
+
+    #home_btn {
+        font-size: 18px; /* Réduire la taille du bouton */
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 36px; /* Encore plus petit sur les très petits écrans */
+        margin-bottom: 50px;
+    }
+
+    #home p {
+        font-size: 16px; /* Ajuste encore plus le texte */
+        margin-bottom: 30px;
+    }
+
+    #home_btn {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
 }
