@@ -26,7 +26,7 @@
     border-right: 4px solid #ffffff; /* Curseur de type écriture */
     white-space: nowrap; /* Rester sur une seule ligne */
     opacity: 0; /* Commencer invisible */
-    animation: fadeIn 1.5s ease-in-out forwards, blink 1s step-end infinite 1.5s; /* Fondu suivi du blink */
+    animation: fadeIn 1.5s ease-in-out forwards, blink 1s step-end infinite 0s; /* Fondu suivi du blink */
 }
 
 /* Animation de fondu */
