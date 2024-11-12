@@ -23,19 +23,19 @@
     font-size: 64px;
     margin-bottom: 150px;
     overflow: hidden;
-    border-right: 4px solid #ffffff;
-    white-space: nowrap; /* Forcer une ligne unique sur grands écrans */
-    width: 0;
-    animation: typing 3s steps(200) 1s forwards, blink 1s step-end infinite;
+    border-right: 4px solid #ffffff; /* Curseur de type écriture */
+    white-space: nowrap; /* Rester sur une seule ligne */
+    opacity: 0; /* Commencer invisible */
+    animation: fadeIn 1.5s ease-in-out forwards, blink 1s step-end infinite 1.5s; /* Fondu suivi du blink */
 }
 
-/* Animation d'écriture (typewriter effect) */
-@keyframes typing {
+/* Animation de fondu */
+@keyframes fadeIn {
     from {
-        width: 0;
+        opacity: 0;
     }
     to {
-        width: 100%;
+        opacity: 1;
     }
 }
 
@@ -46,23 +46,6 @@
     }
     100% {
         border-color: #ffffff;
-    }
-}
-
-/* Ajustements pour les écrans de taille plus petite */
-@media (max-width: 768px) {
-    #home h1 {
-        font-size: 48px; /* Réduit la taille de la police */
-        /*white-space: normal; /* Permet le retour à la ligne */
-        animation: typing 3s steps(200) 1s forwards, blink 1s step-end infinite;
-    }
-}
-
-@media (max-width: 480px) {
-    #home h1 {
-        font-size: 32px; /* Réduit davantage la taille de la police */
-       /* white-space: normal; /* Permet le retour à la ligne */
-        animation: typing 3s steps(200) 1s forwards, blink 1s step-end infinite;
     }
 }
 
@@ -80,7 +63,7 @@
     text-decoration: none;
     border-radius: 5px;
     transition: border-radius 0.3s ease, background-color 0.3s ease;
-    font-size: 24px;
+    font-size: 18px;
     margin-top: 100px;
 }
 
