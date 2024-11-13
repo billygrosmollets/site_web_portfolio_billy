@@ -21,12 +21,33 @@
 
 #home h1 {
     font-size: 64px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     overflow: hidden;
-    border-right: 4px solid #ffffff; /* Curseur de type écriture */
-    white-space: nowrap; /* Rester sur une seule ligne */
-    opacity: 0; /* Commencer invisible */
-    animation: fadeIn 1.5s ease-in-out forwards, blink 1s step-end infinite 0s; /* Fondu suivi du blink */
+    border-right: 4px solid #ffffff;
+    white-space: nowrap;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards, blink 1s step-end infinite 0s;
+}
+
+/* Style du bouton */
+#home_btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 50px;
+    opacity: 0; /* Commence invisible */
+    animation: fadeIn 2s ease-in-out forwards; /* Applique le fondu */
+    animation-delay: 1s; /* Début du fondu après le titre */
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+}
+
+#home_btn:hover {
+    border-radius: 15px;
+    background-color: #191919;
+    font-weight: bold;
 }
 
 /* Animation de fondu */
@@ -47,28 +68,4 @@
     100% {
         border-color: #ffffff;
     }
-}
-
-/* Le reste de ton CSS reste inchangé */
-#home p {
-    font-size: 24px;
-    margin-bottom: 200px;
-    max-width: 1050px;
-}
-
-#home_btn {
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: border-radius 0.3s ease, background-color 0.3s ease;
-    font-size: 18px;
-    margin-top: 100px;
-}
-
-#home_btn:hover {
-    border-radius: 15px;
-    background-color: #191919;
-    font-weight: bold;
 }
