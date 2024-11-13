@@ -22,7 +22,7 @@
 
 #home h1 {
     font-size: 64px;
-    margin-bottom: 5vh; /* Utilisation de vh pour les marges en fonction de la hauteur de la page */
+    margin-bottom: 10vh; /* Utilisation de vh pour les marges en fonction de la hauteur de la page */
     overflow: hidden;
     border-right: 4px solid #ffffff;
     white-space: nowrap;
@@ -30,20 +30,7 @@
     animation: fadeIn 1.5s ease-in-out forwards, blink 1s step-end infinite 0s;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #home h1 {
-        font-size: 48px;
-        margin-bottom: 4vh;
-    }
-}
 
-@media (max-width: 480px) {
-    #home h1 {
-        font-size: 32px;
-        margin-bottom: 3vh;
-    }
-}
 
 
 /* Style du bouton */
@@ -54,11 +41,31 @@
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
-    margin-top: 10px;
     opacity: 0; /* Commence invisible */
     animation: fadeIn 2s ease-in-out forwards; /* Applique le fondu */
     animation-delay: 1s; /* Début du fondu après le titre */
     transition: border-radius 0.3s ease, background-color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 48px;
+    }
+
+    #home_btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 30px;
+    }
+
+    #home_btn {
+        font-size: 14px;
+    }
 }
 
 #home_btn:hover {
