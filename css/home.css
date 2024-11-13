@@ -1,4 +1,3 @@
-/* Style de la section d'accueil */
 #home {
     background: url('../assets/home.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -7,6 +6,7 @@
     align-items: center;
     color: #ffffff;
     text-align: center;
+    padding: 0 5vw; /* Marges latérales en fonction de la largeur de la page */
     position: relative;
     z-index: 0;
 }
@@ -17,11 +17,12 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 0 5vw; /* Marges internes pour gérer l'espacement selon la largeur de la page */
 }
 
 #home h1 {
     font-size: 64px;
-    margin-bottom: 100px;
+    margin-bottom: 5vh; /* Utilisation de vh pour les marges en fonction de la hauteur de la page */
     overflow: hidden;
     border-right: 4px solid #ffffff;
     white-space: nowrap;
@@ -29,20 +30,21 @@
     animation: fadeIn 1.5s ease-in-out forwards, blink 1s step-end infinite 0s;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     #home h1 {
-        font-size: 48px; /* Smaller font for tablets */
-        margin-bottom: 60px;
+        font-size: 48px;
+        margin-bottom: 4vh;
     }
 }
 
 @media (max-width: 480px) {
     #home h1 {
-        font-size: 32px; /* Even smaller font for smartphones */
-        margin-bottom: 40px;
+        font-size: 32px;
+        margin-bottom: 3vh;
     }
 }
+
 
 /* Style du bouton */
 #home_btn {
@@ -52,7 +54,7 @@
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
-    margin-top: 50px;
+    margin-top: 10px;
     opacity: 0; /* Commence invisible */
     animation: fadeIn 2s ease-in-out forwards; /* Applique le fondu */
     animation-delay: 1s; /* Début du fondu après le titre */
