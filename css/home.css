@@ -29,6 +29,21 @@
     animation: fadeIn 1.5s ease-in-out forwards, blink 1s step-end infinite 0s;
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 48px; /* Smaller font for tablets */
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 32px; /* Even smaller font for smartphones */
+        margin-bottom: 40px;
+    }
+}
+
 /* Style du bouton */
 #home_btn {
     padding: 10px 20px;
