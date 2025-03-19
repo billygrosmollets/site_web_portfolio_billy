@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clément Billy - Portfolio</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
@@ -37,83 +37,105 @@
     </div>
 </section>
 
-<!--<section id="home">
-    <div>
-        <h1 class="animated-title">Website available soon...</h1>
-        <a href="BILLY_Clément_M2_CV.pdf" download="BILLY_Clément_M2_CV" id="home_btn">Cliquez ici pour obtenir mon CV</a>
-    </div>
-</section>-->
-
 
 <section id="about">
-    <h1>À Propos de Moi</h1>
-    <div>
-        <img src="assets/face.jpg" alt="Ma photo de profil" id="profile-picture">
-        <p>Prochainement diplômé d’un master en ingénierie spécialisé en systèmes embarqués, je suis à la recherche
-            d’opportunités dans ce domaine et dans le développement technologique en général. Depuis toujours, je suis
-            passionné par le monde de l’informatique, un domaine aux multiples facettes qui touche de nombreux secteurs
-            et contribue à transformer notre quotidien. Mon expérience au sein de VLM Robotic, combinée à ma formation
-            académique, m’a permis de participer à de nombreux projets enrichissants, où j'ai acquis des compétences
-            techniques avancées et une compréhension approfondie des processus d’innovation. Cette expérience m’a non
-            seulement donné l’occasion de travailler en équipe sur des projets variés et ambitieux, mais elle a aussi
-            renforcé ma curiosité et mon envie de contribuer à des initiatives créatives et avant-gardistes. Je cherche
-            désormais à intégrer une équipe dynamique engagée dans le développement de projets innovants où je pourrai
-            mettre à profit mes compétences tout en continuant à apprendre et à relever de nouveaux défis.</p>
+    <h1>À Propos <!--<span class="highlight">Moi</span>--></h1>
+    <div class="about-container">
+        <img src="assets/face2.jpg" alt="Ma photo de profil" id="profile-picture">
+        <div class="about-text">
+            <p>Prochainement diplômé d'un <span class="highlight">master en ingénierie</span> spécialisé en <span class="highlight">systèmes embarqués</span>, je suis à la recherche d'opportunités dans ce domaine et dans le développement technologique en général.</p>
+
+            <p>Depuis toujours, je suis <span class="highlight">passionné par le monde de l'informatique</span>, un domaine aux multiples facettes qui touche de nombreux secteurs et contribue à transformer notre quotidien.</p>
+
+            <p>Mon expérience au sein de <span class="highlight">VLM Robotic</span>, combinée à ma formation académique, m'a permis de participer à de nombreux projets enrichissants, où j'ai acquis des compétences techniques avancées et une compréhension approfondie des processus d'innovation.</p>
+
+            <p>Cette expérience m'a non seulement donné l'occasion de travailler en équipe sur des projets variés et ambitieux, mais elle a aussi renforcé ma curiosité et mon envie de contribuer à des initiatives créatives et avant-gardistes.</p>
+
+            <p>Je cherche désormais à intégrer une équipe dynamique engagée dans le développement de <span class="highlight">projets innovants</span> où je pourrai mettre à profit mes compétences tout en continuant à apprendre et à relever de nouveaux défis.</p>
+        </div>
     </div>
 </section>
 
 <section id="projects">
-    <h1>Projets</h1>
-    <div class="project">
-        <img src="assets/mepuls.jpg" alt="Image du projet 1" class="project-image">
-        <div class="project-details">
-            <h3>Logiciel IHM (C++)</h3>
-            <p>Description de mon premier projet.</p>
-            <a href="page_projet1.html" class="project-btn">Voir le projet</a>
-        </div>
-    </div>
-
-    <div class="project">
-        <img src="assets/pong-space_invaders.jpg" alt="Image du projet 2" class="project-image">
-        <div class="project-details">
-            <h1>Generic_Arcade_Game</h1>
-            <p>Description de mon second projet.</p>
-            <a href="page_projet2.html" class="project-btn">Voir le projet</a>
-        </div>
-    </div>
-
-    <div class="project">
-        <img src="assets/full.png" alt="Image du projet 2" class="project-image">
-        <div class="project-details">
-            <h1>La Risimachine</h1>
-            <p>Description de mon troisieme projet.</p>
-            <a href="page_projet2.html" class="project-btn">Voir le projet</a>
-        </div>
-    </div>
-
-</section>
-
-<section id="skills">
-    <h1>Compétences</h1>
-    <div id="skills-carousel">
-        <button id="arrow left" onclick="prevSkill()">&#9664;</button>
-        <div id="skill-container">
-            <div id="skills-wrapper">
-                <div class="skill"><img src="assets/clion.svg" class="skill-image" alt="CLion"></div>
-                <div class="skill"><img src="assets/c.svg" class="skill-image" alt="C Programming"></div>
-                <div class="skill"><img src="assets/webstorm.svg" class="skill-image" alt="WebStorm"></div>
+    <!-- Projet 1 -->
+    <div class="project-card">
+        <div class="project-background" style="background-image: url('assets/mepuls.jpg');"></div>
+        <div class="project-content">
+            <h2>Logiciel IHM</h2>
+            <p>Une interface homme-machine intuitive conçue pour optimiser les processus industriels, intégrant des fonctionnalités avancées de visualisation et de contrôle en temps réel.</p>
+            <div class="project-links">
+                <a href="page_projet1.html" class="project-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    Voir le projet
+                </a>
+                <a href="#" class="project-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    GitHub
+                </a>
             </div>
         </div>
-        <button id="arrow right" onclick="nextSkill()">&#9654;</button>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="project-card">
+        <div class="project-background" style="background-image: url('assets/pong-space_invaders.jpg');"></div>
+        <div class="project-content">
+            <h2>Generic Arcade Game</h2>
+            <p>Un jeu d'arcade rétro combinant les mécaniques classiques de Pong et Space Invaders pour créer une expérience nostalgique avec une touche moderne et des défis innovants.</p>
+            <div class="project-links">
+                <a href="page_projet2.html" class="project-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    Voir le projet
+                </a>
+                <a href="#" class="project-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projet 3 -->
+    <div class="project-card">
+        <div class="project-background" style="background-image: url('assets/risitas.png');"></div>
+        <div class="project-content">
+            <h2>La Risimachine</h2>
+            <p>Un système embarqué intelligent qui automatise les processus complexes tout en offrant une interface utilisateur intuitive, conçu pour optimiser l'efficacité opérationnelle.</p>
+            <div class="project-links">
+                <a href="page_projet3.html" class="project-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    Voir le projet
+                </a>
+                <a href="#" class="project-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="contact">
-    <h1>Contact</h1>
-    <p>LinkedIn : <a href="https://www.linkedin.com/in/billy-clement/" target="_blank"> <img src=assets/linkedin.png"> </a></p>
-    <p>Email : <a href="clementbilly04@gmail.com" target="_blank"> <img src=assets/gmail.png"> </a></p>
-    <p>Portable : 07 81 65 08 58</p>
+    <p class="connect-text">Feel free to <span class="highlight">connect</span> with me</p>
+
+    <div class="social-icons">
+        <a href="https://github.com/billygrosmollets" target="_blank" class="social-icon">
+            <img src="assets/github-icon-1.svg" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/billy-clement/" target="_blank" class="social-icon">
+            <img src="assets/linkedin-icon-1.svg" alt="LinkedIn">
+        </a>
+
+        <a href="mailto:clementbilly04@gmail.com" target="_blank" class="social-icon">
+            <img src="assets/official-gmail-icon-2020-.svg" alt="Email">
+        </a>
+
+    </div>
+
+    <p class="phone-number">+33 (0)7 81 65 08 58</p>
 </section>
+
+
 <script src="index.js"></script>
 </body>
 </html>
