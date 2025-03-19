@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clément Billy - Portfolio</title>
-
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/project.css">
-    <link rel="stylesheet" href="css/skill.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="css-home/header.css">
+    <link rel="stylesheet" href="css-home/home.css">
+    <link rel="stylesheet" href="css-home/about.css">
+    <link rel="stylesheet" href="css-home/project.css">
+    <link rel="stylesheet" href="css-home/contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -40,7 +38,6 @@
 <section id="about">
     <h1>À Propos <!--<span class="highlight">Moi</span>--></h1>
     <div class="about-container">
-        <img src="assets/face2.jpg" alt="Ma photo de profil" id="profile-picture">
         <div class="about-text">
             <p>Prochainement diplômé d'un <span class="highlight">master en ingénierie</span> spécialisé en <span class="highlight">systèmes embarqués</span>, je suis à la recherche d'opportunités dans ce domaine et dans le développement technologique en général.</p>
 
@@ -52,6 +49,9 @@
 
             <p>Je cherche désormais à intégrer une équipe dynamique engagée dans le développement de <span class="highlight">projets innovants</span> où je pourrai mettre à profit mes compétences tout en continuant à apprendre et à relever de nouveaux défis.</p>
         </div>
+<!--
+        <img src="assets/168726.png" alt="Ma photo de profil" id="profile-picture">
+-->
     </div>
 </section>
 
@@ -64,7 +64,7 @@
             <h2>Logiciel IHM</h2>
             <p>Une interface homme-machine intuitive conçue pour optimiser les processus industriels, intégrant des fonctionnalités avancées de visualisation et de contrôle en temps réel.</p>
             <div class="project-links">
-                <a href="page_projet1.html" class="project-link">
+                <a href="projet1.html" class="project-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     Voir le projet
                 </a>
@@ -83,7 +83,7 @@
             <h2>Generic Arcade Game</h2>
             <p>Un jeu d'arcade rétro combinant les mécaniques classiques de Pong et Space Invaders pour créer une expérience nostalgique avec une touche moderne et des défis innovants.</p>
             <div class="project-links">
-                <a href="page_projet2.html" class="project-link">
+                <a href="projet2.html" class="project-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     Voir le projet
                 </a>
@@ -135,6 +135,9 @@
     <p class="phone-number">+33 (0)7 81 65 08 58</p>
 </section>
 
+<section id="end">
+    <p class="connect-text">© Clément Billy 2025</p>
+</section>
 
 <script src="index.js"></script>
 </body>
