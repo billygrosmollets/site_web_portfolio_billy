@@ -1,4 +1,4 @@
-/* ==================== GENERAL STYLES ==================== */
+/* ==================== VARIABLES ==================== */
 :root {
     /* Color palette */
     --primary-dark: #181A1B;
@@ -9,8 +9,10 @@
     --primary-accent-hover: #3c4771;
     --text-light: #FFFFFF;
     --text-muted: #9E9589;
+    --accent-green: rgba(50, 205, 50, 0.7);
 }
 
+/* ==================== BASE STYLES ==================== */
 html {
     scroll-behavior: smooth;
 }
@@ -27,6 +29,35 @@ body {
     background-attachment: fixed;
 }
 
+/* ==================== COMMON STYLES ==================== */
+.highlight {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+/* Section title styling */
+#about h1, #projects h1 {
+    font-size: 42px;
+    color: var(--text-light);
+    margin-bottom: 50px;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Common section background style */
+#about::before, #projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 20px;
+}
+
 /* ==================== HEADER SECTION ==================== */
 #header {
     position: fixed;
@@ -35,7 +66,7 @@ body {
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 0;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
 }
 
@@ -118,39 +149,19 @@ nav ul li a:hover {
 #about {
     display: flex;
     flex-direction: column;
-    padding: 20px 150px;
+    padding: 25px 150px;
     position: relative;
-    z-index: 1; /* S'assure que le contenu est au-dessus du fond */
-    margin-bottom: 100px; /* Ajoutez cette ligne */
-
+    z-index: 1;
+    margin-bottom: 100px;
 }
 
 #about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Centre le fond */
-    width: 90%; /* Largeur du fond (ajustez selon vos besoins) */
-    height: 100%;
     background-image: linear-gradient(to right, rgba(13, 13, 13, 0.95), rgba(13, 13, 13, 0.8));
-    z-index: -1;
-    border-radius: 20px; /* Optionnel : pour arrondir les coins */
-
-}
-
-#about h1 {
-    font-size: 42px;
-    color: var(--text-light);
-    margin-bottom: 50px;
-    text-align: left;
-    font-weight: 700;
-    letter-spacing: 1px;
 }
 
 .about-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse; /* Inversé pour mettre l'image à droite */
     width: 100%;
     align-items: flex-start;
     gap: 50px;
@@ -162,7 +173,7 @@ nav ul li a:hover {
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 3px solid rgba(50, 205, 50, 0.7);
+    border: 3px solid var(--accent-green);
 }
 
 #profile-picture:hover {
@@ -176,62 +187,10 @@ nav ul li a:hover {
 
 #about p {
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--text-light);
     text-align: justify;
     line-height: 1.6;
     margin-bottom: 18px;
-}
-
-.highlight {
-    color: rgba(50, 205, 50, 0.7); /* Couleur verte similaire à celle utilisée précédemment */
-    font-weight: 600;
-}
-
-/* Media queries pour la responsivité */
-@media screen and (max-width: 1024px) {
-    #about {
-        padding: 50px 80px;
-    }
-
-    #about::before {
-        width: 92%; /* Légèrement plus large sur les écrans moyens */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #profile-picture {
-        width: 250px;
-        margin-bottom: 30px;
-    }
-
-    #about {
-        padding: 40px 30px;
-    }
-
-    #about h1 {
-        text-align: center;
-        font-size: 36px;
-    }
-
-    #about::before {
-        width: 95%; /* Plus large sur les petits écrans */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #about {
-        padding: 30px 20px;
-    }
-
-    #about::before {
-        width: 100%; /* Pleine largeur sur très petits écrans */
-        border-radius: 0; /* Optionnel: supprimer les coins arrondis sur très petits écrans */
-    }
 }
 
 /* ==================== PROJECTS SECTION ==================== */
@@ -239,22 +198,13 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 50px 150px;
+    padding: 25px 200px;
     position: relative;
-    z-index: 1; /* S'assure que le contenu est au-dessus du fond */
+    z-index: 1;
 }
 
 #projects::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Centre le fond */
-    width: 90%; /* Largeur du fond (ajustez selon vos besoins) */
-    height: 100%;
     background-color: rgba(13, 13, 13, 0.9);
-    z-index: -1;
-    border-radius: 20px; /* Optionnel : pour arrondir les coins */
 }
 
 .project-card {
@@ -262,7 +212,7 @@ nav ul li a:hover {
     width: 100%;
     height: 300px;
     overflow: hidden;
-    color: #ffffff;
+    color: var(--text-light);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -299,7 +249,7 @@ nav ul li a:hover {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #ffffff;
+    color: var(--text-light);
 }
 
 .project-content p {
@@ -324,12 +274,12 @@ nav ul li a:hover {
     gap: 8px;
     padding: 8px 16px;
     background-color: transparent;
-    color: #ffffff;
+    color: var(--text-light);
     text-decoration: none;
     border-radius: 4px;
     font-size: 14px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(50, 205, 50, 0.7);
+    border: 1px solid var(--accent-green);
 }
 
 .project-link svg {
@@ -338,152 +288,8 @@ nav ul li a:hover {
 }
 
 .project-link:hover {
-    background-color: rgba(50, 205, 50, 0.7);
+    background-color: var(--accent-green);
     transform: translateY(-3px);
-}
-
-/* Ajout de couleurs différentes pour chaque projet */
-.project-card:nth-child(1) .project-link {
-    border-color: rgba(50, 205, 50, 0.7); /* Violet */
-}
-
-.project-card:nth-child(1) .project-link:hover {
-    background-color: rgba(50, 205, 50, 0.7);
-}
-
-.project-card:nth-child(2) .project-link {
-    border-color: rgba(50, 205, 50, 0.7); /* Royal Blue */
-}
-
-.project-card:nth-child(2) .project-link:hover {
-    background-color: rgba(50, 205, 50, 0.7);
-}
-
-.project-card:nth-child(3) .project-link {
-    border-color: rgba(50, 205, 50, 0.7); /* Lime Green */
-}
-
-.project-card:nth-child(3) .project-link:hover {
-    background-color: rgba(50, 205, 50, 0.7);
-}
-
-/* Media queries pour la responsivité */
-@media (max-width: 1024px) {
-    #projects {
-        padding: 50px 80px;
-    }
-
-    #projects::before {
-        width: 92%; /* Légèrement plus large sur les écrans moyens */
-    }
-}
-
-@media (max-width: 768px) {
-    #projects {
-        padding: 40px 30px;
-    }
-
-    #projects::before {
-        width: 95%; /* Plus large sur les petits écrans */
-    }
-
-    .project-content h2 {
-        font-size: 28px;
-    }
-
-    .project-content p {
-        font-size: 14px;
-        padding: 0 15px;
-    }
-
-    .project-card {
-        height: 350px;
-    }
-}
-
-/* Pour les très petits écrans */
-@media (max-width: 480px) {
-    #projects {
-        padding: 30px 20px;
-    }
-
-    #projects::before {
-        width: 100%; /* Pleine largeur sur très petits écrans */
-        border-radius: 0; /* Optionnel: supprimer les coins arrondis sur très petits écrans */
-    }
-
-    .project-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        height: 400px;
-    }
-
-    .project-content h2 {
-        font-size: 24px;
-    }
-}
-/* ==================== SKILLS SECTION ==================== */
-#skills {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#skills-carousel {
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-#skill-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-#skills-wrapper {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-}
-
-.skill {
-    flex: 0 0 auto;
-    margin: 0 10px;
-}
-
-.skill-image {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-}
-
-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-#arrow-left {
-    left: 0;
-}
-
-#arrow-right {
-    right: 0;
 }
 
 /* ==================== CONTACT SECTION ==================== */
@@ -502,7 +308,7 @@ button:hover {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-light);
     letter-spacing: 2px;
 }
 
@@ -510,11 +316,6 @@ button:hover {
     font-size: 18px;
     margin-bottom: 40px;
     color: #ccc;
-}
-
-.highlight {
-    color: rgba(50, 205, 50, 0.7); /* Couleur violet similaire à celle utilisée dans l'image */
-    font-weight: 600;
 }
 
 .social-icons {
@@ -544,7 +345,7 @@ button:hover {
 .social-icon img {
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1); /* Rendre les icônes blanches */
+    filter: brightness(0) invert(1);
 }
 
 .phone-number {
@@ -553,64 +354,37 @@ button:hover {
     color: #ccc;
 }
 
-/* Media queries pour la responsivité */
-@media screen and (max-width: 600px) {
-    #contact {
-        padding: 40px 20px;
-    }
-
-    .social-icons {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .social-icon {
-        width: 45px;
-        height: 45px;
-    }
-}
-
 /* ==================== ANIMATIONS ==================== */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: var(--text-light);
-    }
+    50% { border-color: transparent; }
+    100% { border-color: var(--text-light); }
 }
 
 /* ==================== RESPONSIVE STYLES ==================== */
+/* Large screens (1024px - 1200px) */
 @media (max-width: 1200px) {
     #about {
         padding: 50px 100px;
     }
 }
 
-@media (max-width: 992px) {
-    #about {
-        padding: 50px;
+/* Medium screens (768px - 1024px) */
+@media (max-width: 1024px) {
+    #about, #projects {
+        padding: 50px 80px;
     }
 
-    #about div {
-        flex-direction: column;
-    }
-
-    #about p {
-        margin-left: 0;
-        margin-top: 30px;
+    #about::before, #projects::before {
+        width: 92%;
     }
 }
 
+/* Small screens (480px - 768px) */
 @media (max-width: 768px) {
     body {
         overflow: hidden;
@@ -625,19 +399,59 @@ button:hover {
         font-size: 16px;
     }
 
+    #about, #projects {
+        padding: 40px 30px;
+    }
+
+    #about h1, #projects h1 {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    #about::before, #projects::before {
+        width: 95%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #profile-picture {
+        width: 250px;
+        margin-bottom: 30px;
+    }
+
     .project {
         flex-direction: column;
         text-align: center;
     }
-}
 
-@media (max-width: 600px) {
-    .skill-image {
-        width: 80px;
-        height: 80px;
+    .project-content h2 {
+        font-size: 28px;
+    }
+
+    .project-content p {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .project-card {
+        height: 350px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
     }
 }
 
+/* Extra small screens (below 480px) */
 @media (max-width: 480px) {
     #home h1 {
         font-size: 30px;
@@ -645,5 +459,32 @@ button:hover {
 
     #home_btn {
         font-size: 14px;
+    }
+
+    #about, #projects {
+        padding: 30px 20px;
+    }
+
+    #about::before, #projects::before {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .project-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        height: 400px;
+    }
+
+    .project-content h2 {
+        font-size: 24px;
+    }
+
+    .skill-image {
+        width: 80px;
+        height: 80px;
     }
 }
