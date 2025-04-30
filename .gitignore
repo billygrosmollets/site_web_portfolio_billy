@@ -1,0 +1,14 @@
+# node modules (si tu utilises npm/yarn)
+node_modules/
+
+# fichiers de build
+dist/
+build/
+
+# cache d'éditeurs
+.vscode/
+.idea/
+
+# systèmes
+.DS_Store
+Thumbs.db
