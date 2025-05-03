@@ -1,8 +1,7 @@
 /* ==================== CONTACT SECTION ==================== */
 #contact {
-    background-color: rgba(13, 13, 13, 0.8);
+    background-image: linear-gradient(to right, #181A1B, rgba(13, 13, 13, 0.8));
     padding: 20px;
-    color: var(--text-light);
     text-align: center;
     border-radius: 10px;
     margin: 100px auto;
@@ -10,18 +9,26 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+[data-theme="light"] #contact {
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 #contact h1 {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 600;
-    color: var(--text-light);
     letter-spacing: 2px;
 }
 
 .connect-text {
     font-size: 18px;
     margin-bottom: 40px;
-    color: #ccc;
+    color: #9E9589;
+}
+
+[data-theme="light"] .connect-text {
+    color: #666666;
 }
 
 .social-icons {
@@ -37,15 +44,23 @@
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: #333;
+    background-color: #404040;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
+[data-theme="light"] .social-icon {
+    background-color: #DCDCDC;
+}
+
 .social-icon:hover {
     transform: translateY(-5px);
-    background-color: #444;
+    background-color: #505050;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .social-icon:hover {
+    background-color: #CCCCCC;
 }
 
 .social-icon img {
@@ -54,8 +69,16 @@
     filter: brightness(0) invert(1);
 }
 
+[data-theme="light"] .social-icon img {
+    filter: none;
+}
+
 .phone-number {
     font-size: 18px;
     margin-top: 30px;
-    color: #ccc;
+    color: #9E9589;
+}
+
+[data-theme="light"] .phone-number {
+    color: #666666;
 }

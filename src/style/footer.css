@@ -1,0 +1,11 @@
+/* ==================== FOOTER SECTION ==================== */
+#end {
+    font-size: 24px;
+    text-align: center;
+    color: #9E9589;
+    padding: 10px;
+}
+
+[data-theme="light"] #end {
+    color: #666666;
+}

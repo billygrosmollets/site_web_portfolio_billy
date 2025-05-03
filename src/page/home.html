@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément Billy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header id="header">
+    <a href="home.html" class="logo">CB</a>
+    <nav>
+        <ul>
+            <li><a href="home.html" class="active" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="toggles">
+        <div class="theme-toggle">
+            <img src="../assets/header/moon.svg" alt="Theme Toggle" id="theme-icon">
+        </div>
+        <div class="language-toggle">
+            <img src="../assets/header/fr.svg" alt="Language Toggle" id="language-icon">
+        </div>
+    </div>
+</header>
+
+<section id="home">
+    <div id="home-title" class="animate__animated animate__backInDown animate__delay-1s">
+        <h1 data-i18n="home_title">Hey, I'm <span class="highlight">Clément Billy</span></h1>
+        <span class="typing-container">
+        <span class="typing-wrapper">
+          <span id="typing-text"></span><span class="cursor"></span>
+        </span>
+      </span>
+        <div id="home-btn">
+            <a href="../../BILLY_Clément_M2_CV.pdf" download="BILLY_Clément_M2_CV" class="home_btn">
+                <img src="../assets/download.svg" alt="External link" width="20" height="20">
+                <span data-i18n="home_resume">Resume</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="end">
+    <p class="connect-text" data-i18n="footer">© Clément Billy 2025</p>
+</section>
+
+<script src="../script/translation.js"></script>
+<script src="../script/language.js"></script>
+<script src="../script/theme.js"></script>
+<script src="../script/typing.js"></script>
+</body>
+</html>

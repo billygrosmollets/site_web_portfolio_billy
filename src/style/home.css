@@ -1,0 +1,89 @@
+/* ==================== HOME SECTION ==================== */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 300px 200px;
+}
+
+#home-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#home h1 {
+    font-size: 64px;
+    margin: 0;
+}
+
+.typing-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.typing-wrapper {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 40px;
+}
+
+#typing-text {
+    font-size: 28px;
+    color: #FFF;
+}
+
+[data-theme="light"] #typing-text {
+    color: #333;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 28px;
+    background: #FFF;
+    margin-left: 2px;
+}
+
+[data-theme="light"] .cursor {
+    background: #333;
+}
+
+#home-btn {
+    display: flex;
+    gap: 30px;
+}
+
+.home_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: rgba(0, 17, 34);
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 24px;
+    border: 2px solid #fb9e24;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home_btn img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+[data-theme="light"] .home_btn {
+    background: rgba(240, 240, 240, 0.7);
+    color: #333;
+}
+
+.home_btn:hover {
+    background: #fb9e24;
+    box-shadow: 0 5px 15px rgb(255, 98, 0);
+}
