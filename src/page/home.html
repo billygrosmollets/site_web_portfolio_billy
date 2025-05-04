@@ -5,58 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clément Billy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="../style/home.css">
-    <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/footer.css">
     <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <header id="header">
     <a href="home.html" class="logo">CB</a>
     <nav>
         <ul>
-            <li><a href="home.html" class="active" data-i18n="nav_home">Home</a></li>
-            <li><a href="about.html" data-i18n="nav_about">About</a></li>
-            <li><a href="projects.html" data-i18n="nav_projects">Projects</a></li>
-            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+            <li><a href="home.html" class="active" data-i18n="nav-home"></a></li>
+            <li><a href="about.html" data-i18n="nav-about"></a></li>
+            <li><a href="projects.html" data-i18n="nav-projects"></a></li>
+            <li><a href="contact.html" data-i18n="nav-contact"></a></li>
         </ul>
     </nav>
     <div class="toggles">
         <div class="theme-toggle">
-            <img src="../assets/header/moon.svg" alt="Theme Toggle" id="theme-icon">
+            <img src="../assets/header/sun.svg" alt="Theme Toggle" id="theme-icon">
         </div>
         <div class="language-toggle">
-            <img src="../assets/header/fr.svg" alt="Language Toggle" id="language-icon">
+            <img src="../assets/header/en.svg" alt="Language Toggle" id="language-icon">
         </div>
     </div>
 </header>
-
 <section id="home">
     <div id="home-title" class="animate__animated animate__backInDown animate__delay-1s">
-        <h1 data-i18n="home_title">Hey, I'm <span class="highlight">Clément Billy</span></h1>
-        <span class="typing-container">
-        <span class="typing-wrapper">
-          <span id="typing-text"></span><span class="cursor"></span>
-        </span>
-      </span>
-        <div id="home-btn">
-            <a href="../../BILLY_Clément_M2_CV.pdf" download="BILLY_Clément_M2_CV" class="home_btn">
-                <img src="../assets/download.svg" alt="External link" width="20" height="20">
-                <span data-i18n="home_resume">Resume</span>
+        <h1 data-i18n="home_title"></h1>
+        <p class="subtitle">Senior Front-End & Full-Stack Engineer with Over 8 Years of Building Innovative Web Solutions</p>
+        <div class="icon-container">
+            <a href="../../BILLY_Clément_M2_CV.pdf" download="BILLY_Clément_M2_CV" class="icon-link">
+                <img src="../assets/logo/gmail-logo.svg" alt="Resume Icon" class="icon">
+            </a>
+            <a href="https://github.com" class="icon-link">
+                <img src="../assets/logo/github-logo.svg" alt="GitHub Icon" class="icon">
+            </a>
+            <a href="https://linkedin.com" class="icon-link">
+                <img src="../assets/logo/linkedin-logo.svg" alt="LinkedIn Icon" class="icon">
             </a>
         </div>
     </div>
+    <div class="image-container">
+        <img src="../assets/p.svg" alt="Profile Image" class="profile-image">
+    </div>
 </section>
-
 <section id="end">
-    <p class="connect-text" data-i18n="footer">© Clément Billy 2025</p>
+    <p class="connect-text" data-i18n="footer"></p>
 </section>
-
 <script src="../script/translation.js"></script>
 <script src="../script/language.js"></script>
 <script src="../script/theme.js"></script>
-<script src="../script/typing.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93ab3bd82deb12ea',t:'MTc0NjM5NTYzNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>

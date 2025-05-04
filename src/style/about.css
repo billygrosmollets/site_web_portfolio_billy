@@ -3,54 +3,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    padding: 40px 350px;
-    position: relative;
-    color: #fff;
+    padding: 100px 400px 50px;
 }
 
-#about h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    font-weight: 700;
-    color: #ffffff;
-    position: relative;
-}
-
-#about h1::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: #3498db;
-    margin: 15px auto 40px;
-}
-
-.about-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 20px;
-}
-
-#qualities-title {
+.section-title {
     font-size: 2rem;
     margin: 40px 0;
-    text-align: center;
-    color: #ffffff;
+    text-align: left;
+    color: var(--text-color-primary);
+    width: 100%;
 }
 
 .qualities-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 30px;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 .quality-card {
-    background-color: #1e2738;
+    background-color: var(--card-background);
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -63,96 +37,48 @@
 }
 
 .quality-card.main {
-    grid-column: 1;
-    grid-row: span 2;
-    background-color: #1a2436;
-    position: relative;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    background-color: var(--card-background);
 }
 
-.quality-card.main::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 20px;
-    right: 20px;
-    height: 15px;
-    background-color: #162032;
-    border-radius: 0 0 8px 8px;
-    z-index: -1;
+.quality-card.main .card-description {
+    font-size: 1.2rem; /* Augmentation de la taille du texte pour la quality-card main */
+}
+
+.quality-card .header-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .icon-container {
-    background-color: #294166;
+    background-color: var(--icon-background);
     width: 50px;
     height: 50px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-right: 15px; /* Espacement entre l'icône et le titre */
+}
+
+.quality-icon {
+    stroke: var(--accent-color);
 }
 
 .card-title {
     font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #ffffff;
+    color: var(--text-color-primary);
 }
 
 .card-description {
-    color: #b4b7bd;
+    color: var(--text-color-secondary);
     line-height: 1.6;
     font-size: 0.95rem;
 }
 
 .highlight {
-    color: #3498db;
+    color: var(--accent-color);
     font-weight: 500;
-}
-
-.about-text {
-    flex: 1;
-}
-
-#about p {
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
-    color: #b4b7bd;
-    font-size: 1rem;
-}
-
-.passion-statement {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1.2rem;
-    color: #b4b7bd;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .qualities-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-    }
-
-    .qualities-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .quality-card.main {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    #about h1 {
-        font-size: 2.5rem;
-    }
-
-    #qualities-title {
-        font-size: 1.8rem;
-    }
 }
