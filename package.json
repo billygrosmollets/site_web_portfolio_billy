@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-site-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billygrosmollets/Portfolio-Site-Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billygrosmollets/Portfolio-Site-Web/issues"
+  },
+  "homepage": "https://github.com/billygrosmollets/Portfolio-Site-Web#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemailer": "^6.10.1"
+  }
+}
