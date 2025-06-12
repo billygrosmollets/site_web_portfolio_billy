@@ -1,0 +1,69 @@
+/* ==================== GLOBAL STYLES ==================== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Variables pour les assets par défaut (thème dark) */
+  --background-image: url('./assets/bg-dark.svg');
+  --theme-icon: url('./assets/header/sun.svg');
+  --text-color-primary: rgb(230, 230, 230);
+  --text-color-secondary: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --accent-color: rgb(251, 158, 36);
+  --hover-color: rgb(204, 204, 204);
+  --card-background: rgba(255, 255, 255, 0.1);
+  --icon-background: rgb(41, 65, 102);
+}
+
+/* Variations pour le thème clair */
+[data-theme='light'] {
+  --background-image: url('./assets/bg-light.svg');
+  --theme-icon: url('./assets/header/moon.svg');
+  --text-color-primary: rgb(25, 25, 25);
+  --text-color-secondary: rgba(30, 30, 30, 0.9);
+  --card-background: rgba(0, 0, 0, 0.05);
+  --icon-background: rgb(224, 224, 224);
+}
+
+/* Application du thème au body */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Lexend', Arial, sans-serif;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.highlight {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 1024px) {
+  /* Styles tablets */
+}
+
+@media (max-width: 768px) {
+  /* Styles mobiles */
+}
