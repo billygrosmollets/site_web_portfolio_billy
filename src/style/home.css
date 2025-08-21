@@ -1,110 +1,110 @@
 #home {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    margin-top: 25vh;
-    margin-right: 15vw; /* Remplacé pixels par unités relatives vh/vw */
-    margin-left:  15vw; /* Remplacé pixels par unités relatives vh/vw */
-    color: var(--text-color-primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin-top: 25vh;
+  margin-right: 15vw; /* Remplacé pixels par unités relatives vh/vw */
+  margin-left: 15vw; /* Remplacé pixels par unités relatives vh/vw */
+  color: var(--text-color-primary);
 }
 
 #home h1 {
-    font-size: 4.5rem; /* Remplacé pixels par rem */
-    margin: 0;
+  font-size: 4.5rem; /* Remplacé pixels par rem */
+  margin: 0;
 }
 
 #home .subtitle {
-    font-size: 1.5rem; /* Remplacé pixels par rem */
-    font-weight: 400;
-    text-align: left;
-    max-width: 80%; /* Remplacé pixels par pourcentage */
-    line-height: 1.5;
-    color: var(--text-color-primary);
-    animation: fadeInUp 1s ease-in-out 1.5s forwards;
+  font-size: 1.5rem; /* Remplacé pixels par rem */
+  font-weight: 400;
+  text-align: left;
+  max-width: 80%; /* Remplacé pixels par pourcentage */
+  line-height: 1.5;
+  color: var(--text-color-primary);
+  animation: fadeInUp 1s ease-in-out 1.5s forwards;
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(1.25rem); /* Remplacé pixels par rem */
-    }
-    to {
-        opacity: 0.9;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem); /* Remplacé pixels par rem */
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
 }
 
-[data-theme="light"] .cursor {
-    background: #333;
+[data-theme='light'] .cursor {
+  background: #333;
 }
 
 .icon-container {
-    display: flex;
-    justify-content: left;
-    gap: 2rem; /* Remplacé pixels par rem */
+  display: flex;
+  justify-content: left;
+  gap: 2rem; /* Remplacé pixels par rem */
 }
 
 .icon-link {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 }
 
 .icon {
-    width: auto;
-    height: 2.5rem; /* Remplacé pixels par rem */
-    transition: transform 0.3s ease;
+  width: auto;
+  height: 2.5rem; /* Remplacé pixels par rem */
+  transition: transform 0.3s ease;
 }
 
 .icon:hover {
-    transform: translateY(-0.3rem); /* Remplacé pixels par rem */
+  transform: translateY(-0.3rem); /* Remplacé pixels par rem */
 }
 
 .image-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 10%; /* Remplacé pixels par pourcentage */
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 10%; /* Remplacé pixels par pourcentage */
 }
 
 .profile-image {
-    width: 31.25rem; /* Gardé en rem pour maintenir la proportion spécifique */
-    height: auto;
-    animation: float 2s ease-in-out infinite alternate;
+  width: 31.25rem; /* Gardé en rem pour maintenir la proportion spécifique */
+  height: auto;
+  animation: float 2s ease-in-out infinite alternate;
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-0.625rem); /* Remplacé pixels par rem */
-    }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-0.625rem); /* Remplacé pixels par rem */
+  }
 }
 
 /* Media queries pour la responsivité */
 @media (max-width: 1200px) {
-    #home {
-        padding: 10vh 10vw;
-    }
+  #home {
+    padding: 10vh 10vw;
+  }
 
-    .profile-image {
-        width: 25rem;
-    }
+  .profile-image {
+    width: 25rem;
+  }
 }
 
 @media (max-width: 768px) {
-    #home {
-        flex-direction: column;
-        padding: 8vh 5vw;
-    }
+  #home {
+    flex-direction: column;
+    padding: 8vh 5vw;
+  }
 
-    .image-container {
-        margin-left: 0;
-        margin-top: 2rem;
-    }
+  .image-container {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
 
-    #home h1 {
-        font-size: 3rem;
-    }
+  #home h1 {
+    font-size: 3rem;
+  }
 }

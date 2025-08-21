@@ -1,129 +1,129 @@
 /* ==================== PROJECTS SECTION ==================== */
 #projects {
-    display: flex;
-    flex-direction: column;
-    padding: 100px 200px 50px;
-
+  display: flex;
+  flex-direction: column;
+  padding: 100px 200px 50px;
 }
 
 .project-item {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    padding: 50px 0;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    align-items: center; /* Vertically centers the content */
-    justify-content: center; /* Horizontally centers the content */
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 50px 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
 }
-[data-theme="light"] .project-item {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+[data-theme='light'] .project-item {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .project-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 /* Style pour les images de projet */
 .project-image {
-    width: 600px;
-    height: 300px;
-    border-radius: 10px;
-    object-fit: cover; /* Ensures the image fits well within the dimensions */
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image fits well within the dimensions */
 }
 
 .project-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    color: var(--text-color-primary);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: var(--text-color-primary);
 }
 
 .project-header {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .project-title {
-    font-size: 28px;
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-family: 'Lexend', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Lexend', sans-serif;
 }
 
 .project-description {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .tools-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
 }
 
 .tool-tag {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .tool-tag img {
-    width: 26px;
-    height: 26px;
+  width: 26px;
+  height: 26px;
 }
 
 .project-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background-color: rgba(0, 17, 34, 0.5);
-    color: #FFF;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #fb9e24;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: rgba(0, 17, 34, 0.5);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 2px solid #fb9e24;
 }
 
 .project-link:hover {
-    background: #fb9e24;
-    box-shadow: 0 5px 15px rgb(255, 98, 0);
+  background: #fb9e24;
+  box-shadow: 0 5px 15px rgb(255, 98, 0);
 }
 
-.project-link svg, .project-link img {
-    width: 26px;
-    height: 26px;
+.project-link svg,
+.project-link img {
+  width: 26px;
+  height: 26px;
 }
 
-
-
-[data-theme="light"] .tool-tag {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #333;
+[data-theme='light'] .tool-tag {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #333;
 }
 
-[data-theme="light"] .project-link {
-    background: rgba(240, 240, 240, 0.5);
-    color: #333;
+[data-theme='light'] .project-link {
+  background: rgba(240, 240, 240, 0.5);
+  color: #333;
 }
 
-[data-theme="light"] .project-link:hover {
-    background: #fb9e24;
-    box-shadow: 0 5px 15px rgb(255, 98, 0);
+[data-theme='light'] .project-link:hover {
+  background: #fb9e24;
+  box-shadow: 0 5px 15px rgb(255, 98, 0);
 }
